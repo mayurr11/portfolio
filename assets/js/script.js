@@ -157,3 +157,18 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+function toggleContacts(button) {
+  const span = button.querySelector('span');
+  const icon = button.querySelector('ion-icon');
+  
+  if (button.getAttribute('aria-expanded') === 'false') {
+    button.setAttribute('aria-expanded', 'true');
+    span.textContent = 'Hide Contacts';
+    icon.setAttribute('name', 'chevron-up');
+  } else {
+    button.setAttribute('aria-expanded', 'false');
+    span.textContent = 'Show Contacts';
+    icon.setAttribute('name', 'chevron-down');
+  }
+}
